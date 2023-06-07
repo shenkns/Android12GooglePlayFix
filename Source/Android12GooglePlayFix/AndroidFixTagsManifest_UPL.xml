@@ -4,17 +4,17 @@
 
 		<loopElements tag="receiver">
 			<setStringFromAttribute  result="ExportTag" tag="$" name="android:exported"/>
-			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
+			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="true"/>
 			<if condition="ShouldNotAddExportTag">
 				<false>
-					<addAttribute tag="$" name="android:exported" value="true"/>
+					<addAttribute tag="$" name="android:exported" value="false"/>
 				</false>
 			</if>
 		</loopElements>
 
 		<loopElements tag="activity">
 			<setStringFromAttribute  result="ExportTag" tag="$" name="android:exported"/>
-			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
+			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="true"/>
 			<if condition="ShouldNotAddExportTag">
 				<false>
 					<addAttribute tag="$" name="android:exported" value="false"/>
@@ -24,10 +24,10 @@
 
 		<loopElements tag="service">
 			<setStringFromAttribute  result="ExportTag" tag="$" name="android:exported"/>
-			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
+			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="true"/>
 			<if condition="ShouldNotAddExportTag">
 				<false>
-					<addAttribute tag="$" name="android:exported" value="true"/>
+					<addAttribute tag="$" name="android:exported" value="false"/>
 				</false>
 			</if>
 		</loopElements>
