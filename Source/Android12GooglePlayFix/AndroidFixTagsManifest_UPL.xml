@@ -17,7 +17,7 @@
 			<setBoolIsEqual result="ShouldNotAddExportTag" arg1="$S(ExportTag)" arg2="false"/>
 			<if condition="ShouldNotAddExportTag">
 				<false>
-					<addAttribute tag="$" name="android:exported" value="true"/>
+					<addAttribute tag="$" name="android:exported" value="false"/>
 				</false>
 			</if>
 		</loopElements>
